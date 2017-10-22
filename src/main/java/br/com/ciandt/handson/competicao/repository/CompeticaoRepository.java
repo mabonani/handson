@@ -12,8 +12,7 @@ import br.com.ciandt.handson.competicao.model.Modalidade;
 
 public interface CompeticaoRepository extends CrudRepository<Competicao, Long> {
 	List<Competicao> findAllByModalidadeOrderByInicio(Modalidade modalidade);
-	//List<Competicao> findAllOrderByInicio();
-
+	
 	Competicao findFirstByLocalAndModalidadeAndInicioBetweenAndFimBetween(Local local, Modalidade modalidade,
 			Calendar inicioDtInicio, Calendar fimDtInicio, Calendar inicioDtFim, Calendar fimDtFim);
 
